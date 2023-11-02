@@ -9,7 +9,7 @@ const Favorite = {
         <div class="box-container" id="resto-favorite-content">
         </div>
         <div class="no-favorite-page">
-        <h2 class="no-favorite-message">Belum ada resto favorite</h2>
+        <h2 class="no-favorite-message">Belum ada restaurant favorite</h2>
       </div>
       </section>
     `;

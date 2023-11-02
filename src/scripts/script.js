@@ -121,7 +121,7 @@ function showDetail() {
           border-radius: 0.5rem;
         }
       </style>
-      <img class="image" src="${this.parentElement.parentElement.querySelector('.thumb-res').src}" alt="gambar ${this.parentElement.querySelector('.title-res').textContent}" style="width: 100%; margin-bottom: 10px;">
+      <img class="image" src="${this.parentElement.parentElement.querySelector('.thumb-res').src}" alt="gambar ${this.parentElement.querySelector('.title-res').textContent}" style="width: 100%; margin-bottom: 10px;" crossorigin="anonymous">
       <div class="info">
         <p class="locat"><i class="fas fa-map-marker-alt"></i> ${this.parentElement.querySelector('.loc-res').textContent}</p>
         <p class="bin"><i class="fas fa-star"></i></p>

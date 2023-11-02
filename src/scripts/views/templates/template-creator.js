@@ -3,7 +3,7 @@ import CONFIG from '../../globals/config';
 const createRestoDetailTemplate = (resto) => `
   <div tabindex="0" class="box">
     <div class="image">
-      <img class="lazyload" data-src="${resto.pictureId ? CONFIG.BASE_IMAGE_URL_MEDIUM + resto.pictureId : 'https://picsum.photos/id/666/605/450?grayscale'}" class="thumb-res" alt="${resto.name}">
+      <img class="lazyload" data-src="${resto.pictureId ? CONFIG.BASE_IMAGE_URL_MEDIUM + resto.pictureId : 'https://picsum.photos/id/666/605/450?grayscale'}" class="thumb-res" alt="${resto.name}" crossorigin="anonymous">
       <span class="location">${resto.city}</span>
     </div>
     <div class="content">
@@ -51,7 +51,7 @@ const createReviewTemplate = (resto) => `
         <div tabindex="0" class="swiper-slide slide">
             <h2>${review.name}</2>
             <div class="user">
-                <img class="lazyload" src="images/review_people.png" alt="" >
+                <img class="lazyload" src="images/review_people.png" alt="" crossorigin="anonymous">
                 <div class="user-info">
                     <h3>${review.review}</h3>
                     <div class="stars">
@@ -65,7 +65,7 @@ const createReviewTemplate = (resto) => `
 const createRestoItemTemplate = (resto) => `
     <div class="box" >
       <div class="image">
-            <img class="lazyload" data-src="${resto.pictureId ? CONFIG.BASE_IMAGE_URL_MEDIUM + resto.pictureId : 'https://picsum.photos/id/666/605/450?grayscale'}" class="thumb-res" alt="${resto.name}">
+            <img class="lazyload" data-src="${resto.pictureId ? CONFIG.BASE_IMAGE_URL_MEDIUM + resto.pictureId : 'https://picsum.photos/id/666/605/450?grayscale'}" class="thumb-res" alt="${resto.name}" crossorigin="anonymous">
           <span class="location">${resto.city}</span>
             </div>
           <div class="content">

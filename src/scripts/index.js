@@ -2,6 +2,7 @@ import '../styles/style.scss';
 import '../styles/responsive.scss';
 import './utils/header-footer-cstom';
 import './vendor';
+import filter from 'lodash.filter';
 import App from './views/app';
 import swRegister from './utils/sw-register';
 import {
@@ -29,3 +30,6 @@ window.addEventListener('load', () => {
   app.renderPage();
   swRegister();
 });
+
+filter(contacts, contactType.value === 'all' ? {} : { type: contactType.value })
+  .forEach(renderContact);

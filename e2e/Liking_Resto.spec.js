@@ -1,5 +1,12 @@
 Feature('Liking Resto');
 
+Scenario('Check if favorite page is empty', async ({ I }) => {
+  I.amOnPage('/#/favorite');
+  await new Promise((resolve) => setTimeout(resolve, 5000));
+  I.seeElement('.no-favorite-message');
+  I.see('Belum Ada Restaurant Favorite', '.no-favorite-message');
+});
+
 Scenario('Add and Delete Resto', async ({
   I,
 }) => {
@@ -27,6 +34,10 @@ Scenario('Add and Delete Resto', async ({
   I.seeElement('.swal2-confirm');
   I.click('.swal2-confirm');
   await new Promise((resolve) => setTimeout(resolve, 3000));
+  I.amOnPage('/#/favorite');
+  await new Promise((resolve) => setTimeout(resolve, 5000));
+  I.seeElement('.no-favorite-message');
+  I.see('Belum Ada Restaurant Favorite', '.no-favorite-message');
 });
 Scenario('Add a review', async ({
   I,

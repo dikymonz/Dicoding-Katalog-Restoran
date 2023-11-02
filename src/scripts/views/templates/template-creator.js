@@ -1,12 +1,12 @@
 import CONFIG from '../../globals/config';
 
 const createRestoDetailTemplate = (resto) => `
-  <div tabindex="0" class="box">
+  <div class="box">
     <div class="image">
       <img class="lazyload" data-src="${resto.pictureId ? CONFIG.BASE_IMAGE_URL_MEDIUM + resto.pictureId : 'https://picsum.photos/id/666/605/450?grayscale'}" class="thumb-res" alt="${resto.name}" crossorigin="anonymous">
       <span class="location">${resto.city}</span>
     </div>
-    <div class="content">
+    <div tabindex="0" class="content">
       <h2 class="title-res">${resto.name}</h2>
       <div class="icons">
         <div class="icon">
@@ -19,7 +19,7 @@ const createRestoDetailTemplate = (resto) => `
         <span class="rate-res">${resto.rating}</span>
       </div>
       <p class="desc-res">${resto.description}</p>
-      <div class="category-container">
+      <div tabindex="0" class="category-container">
         <h2 class="category-heading">Categories</h2>
         <div class="categories">
           ${resto.categories.map((category) => `<div class="category"><span class="category-name">${category.name}</span></div>`).join('')}

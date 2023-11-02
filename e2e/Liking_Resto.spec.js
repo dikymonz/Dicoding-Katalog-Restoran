@@ -52,10 +52,10 @@ Scenario('Add a review', async ({
   I.click('.btnd');
   I.seeElement('#name-review');
   await new Promise((resolve) => setTimeout(resolve, 2000));
-  I.fillField('#name-review', 'ikyy');
+  I.fillField('#name-review', 'Dicoding');
   I.seeElement('#review-isi');
   await new Promise((resolve) => setTimeout(resolve, 2000));
-  I.fillField('#review-isi', 'Kreen');
+  I.fillField('#review-isi', 'Sangat Rekomended');
   I.seeElement('.btn-review');
   I.click('.btn-review');
   await new Promise((resolve) => setTimeout(resolve, 5000));
